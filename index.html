@@ -204,6 +204,29 @@
 
 		.section {
 			height: 100vh;
+			padding-top: 25px;
+		}
+
+		footer {
+			padding: 10px;
+			width: 80%;
+			display: block;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			right: 0;
+			color: #e9edef;
+			opacity: 0.3;
+			text-align: center
+		}
+
+		footer>p {
+			margin: 0;
+		}
+
+		footer>p>a {
+			color: #e9edef;
 		}
 
 		@media (min-width: 576px) {
@@ -309,7 +332,7 @@
 					<p>자신이 하고 싶은 프로젝트를 자유롭게, 직접 진행할 수 있습니다.</p>
 					<p>다음 영상은 동아리 부원이 직접 만든 자작 공기총입니다.</p>
 				</div>
-				<video class="float_right" data-autoplay>
+				<video class="float_right" data-autoplay controls="true">
 					<source src="video/Shotgun.mp4" alt="공기총 발사 장면" type="video/mp4">
 				</video>
 			</div>
@@ -317,6 +340,10 @@
 		<div class="section">
 			<h1>지금 바로 신청하세요!</h1>
 			<a class="button" href="google">신청하러 가기</a>
+			<footer>
+				<p>Copyright(c)2019 Sangwan Jeon &lt;maxswjeon@naver.com&gt;, All rights reserved</p>
+				<p>Main Robot Logo is <a href="http://www.freepik.com">Designed by Freepik</a>, All rights Reserved</p>
+			</footer>
 		</div>
 	</div>
 
