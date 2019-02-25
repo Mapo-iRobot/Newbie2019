@@ -202,7 +202,7 @@
 			word-break: keep-all
 		}
 
-		.section {
+		.ios {
 			height: 100vh;
 			padding-top: 25px;
 		}
@@ -368,6 +368,11 @@
 		if (!iOS()) {
 			new fullpage('#fullpage', {
 				licenseKey: 'YOUR_KEY_HERE'
+			});
+		}
+		else {
+			document.getElementsByClassName('.section').forEach(element => {
+				element.classList.add('ios');
 			});
 		}
 
