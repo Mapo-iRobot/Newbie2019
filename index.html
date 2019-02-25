@@ -7,10 +7,10 @@
 
 	<title>iRobot 12기 부원을 모집합니다!</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Noto+Sans+KR" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+	<link href="responsive.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.min.css" rel="stylesheet">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.extensions.min.js"></script>
 
@@ -23,16 +23,28 @@
 
 		h1 {
 			color: #e9edef;
-			font-size: 8vw;
+			font-size: 6vw;
 			text-align: center;
-			font-family: 'Noto Sans';
+			font-family: 'Noto Sans', sans-serif;
 			font-weight: bold;
 		}
 
-		img {
-			width: 100%;
+		#logo {
+			width: 80%;
 			display: block;
 			margin: auto;
+		}
+
+		.wrap {
+			min-width: 500px;
+			margin: auto;
+		}
+
+		h4 {
+			color: #e9edef;
+			text-align: center;
+			font-family: 'Noto Sans', sans-serif;
+			font-weight: lighter;
 		}
 
 		.button {
@@ -46,6 +58,7 @@
 			box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
 			background-color: #e9edef;
 			text-align: center;
+			font-family: 'Noto Sans', sans-serif;
 		}
 
 		.button:hover {
@@ -53,12 +66,36 @@
 			background-color: #5A566D;
 		}
 
+		.float_left {
+			float: none;
+		}
+
+		.float_right {
+			float: none;
+		}
+
+		.container>div {
+			width: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.container>img {
+			width: 80%;
+			margin: auto;
+			display: block;
+		}
+
+		.container>div>p {
+			color: #e9edef;
+		}
+
 		@media (min-width: 576px) {
 			h1 {
 				font-size: 2.2em;
 			}
 
-			img {
+			#logo {
 				width: 400px;
 				height: 520px;
 				display: block;
@@ -66,11 +103,43 @@
 			}
 		}
 
-		@media (min-width: 768px) {}
+		@media (min-width: 768px) {
+			.float_left {
+				float: left;
+			}
 
-		@media (min-width: 992px) {}
+			.float_right {
+				float: right;
+			}
 
-		@media (min-width: 1200px) {}
+			.container>div {
+				width: 300px;
+			}
+
+			.container>img {
+				width: 400px;
+			}
+		}
+
+		@media (min-width: 992px) {
+			.container>div {
+				width: 300px;
+			}
+
+			.container>img {
+				width: 500px;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.container>div {
+				width: 400px;
+			}
+
+			.container>img {
+				width: 600px;
+			}
+		}
 	</style>
 </head>
 
@@ -78,10 +147,34 @@
 	<div id="fullpage">
 		<div class="section">
 			<h1>iRobot 12기<br>동아리 부원을 모집합니다!</h1>
-			<img src="Robot.svg">
+			<img id="logo" src="img/Robot.svg">
+			<h4>아래로 스크롤 해 보세요!</h4>
 		</div>
 		<div class="section">
-
+			<div class="container">
+				<div class="float_left">
+					<h1>Lego Mindstorm EV3 지원</h1>
+					<p>20개 이상의 Lego Mindstorm 브릭과 Lego 부품을 지원하여 학생들이 만들고 싶은 것을 만들 수 있습니다.</p>
+					<p>이를 활용하여 매년 전국적으로 열리는 FLL 대회에 참가하여 실적을 거두고 있습니다.</p>
+				</div>
+				<img src="img/Lego Mindstorm.jpg" class="float_right">
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="float_right">
+					<h1>3D 프린터 지원</h1>
+				</div>
+				<img class="float_left">
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="float_left">
+					<h1>다양한 활동 지원</h1>
+				</div>
+				<img class="float_right">
+			</div>
 		</div>
 		<div class="section">
 			<h1>지금 바로 신청하세요!</h1>
@@ -93,11 +186,12 @@
 		new fullpage('#fullpage', {
 			//options here
 			autoScrolling: true,
-			scrollHorizontally: true
+			scrollHorizontally: true,
+			licenseKey: 'YOUR_KEY_HERE'
 		});
 
 		//methods
-		fullpage_api.setAllowScrolling(false);
+		fullpage_api.setAllowScrolling(true);
 	</script>
 </body>
 
