@@ -55,6 +55,77 @@
 
 	<!--Page Style-->
 	<style>
+		/* Animation */
+
+		@keyframes fadeInUp {
+			from {
+				transform: translate3d(0, 40px, 0)
+			}
+
+			to {
+				transform: translate3d(0, 0, 0);
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes fadeInUp {
+			from {
+				transform: translate3d(0, 40px, 0)
+			}
+
+			to {
+				transform: translate3d(0, 0, 0);
+				opacity: 1
+			}
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes fadeIn {
+			from {
+				opacity: 0
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		.animated {
+			animation-duration: 1s;
+			animation-fill-mode: both;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both
+		}
+
+		.fadeInUp {
+			opacity: 0;
+			animation-name: fadeInUp;
+			-webkit-animation-name: fadeInUp;
+		}
+
+		.fadeIn {
+			animation-name: fadeIn;
+			-webkit-animation-name: fadeIn;
+		}
+
+		.delay1 {
+			animation-delay: 1s;
+		}
+
+
+		.delay2 {
+			animation-delay: 2s;
+		}
+
 		*:not(html) {
 			-webkit-transform: translate3d(0, 0, 0);
 		}
@@ -213,9 +284,9 @@
 	<!-- End Google Tag Manager (noscript) -->
 	<div id="fullpage">
 		<div class="section">
-			<h1>iRobot 12기<br>동아리 부원을 모집합니다!</h1>
-			<img id="logo" src="img/Robot.svg">
-			<h4>아래로 스크롤 해 보세요!</h4>
+			<h1 class="animated fadeInUp">iRobot 12기<br>동아리 부원을 모집합니다!</h1>
+			<img class="animated fadeIn delay1" id="logo" src="img/Robot.svg">
+			<h4 class="animated fadeIn delay2">아래로 스크롤 해 보세요!</h4>
 		</div>
 		<div class="section">
 			<div class="container">
