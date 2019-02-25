@@ -86,6 +86,10 @@
 			display: block;
 		}
 
+		.container>video {
+			height: 600px;
+		}
+
 		.container>div>p {
 			color: #e9edef;
 			font-family: 'Noto Sans', sans-serif;
@@ -114,7 +118,7 @@
 			}
 
 			.container>div {
-				width: 300px;
+				width: 350px;
 			}
 
 			.container>img {
@@ -124,7 +128,7 @@
 
 		@media (min-width: 992px) {
 			.container>div {
-				width: 300px;
+				width: 400px;
 			}
 
 			.container>img {
@@ -134,7 +138,7 @@
 
 		@media (min-width: 1200px) {
 			.container>div {
-				width: 400px;
+				width: 450px;
 			}
 
 			.container>img {
@@ -175,8 +179,12 @@
 			<div class="container">
 				<div class="float_left">
 					<h1>다양한 활동 지원</h1>
+					<p>자신이 하고 싶은 프로젝트를 자유롭게, 직접 진행할 수 있습니다.</p>
+					<p>다음 영상은 10기 양성렬 선배가 만드신 자작 공기총입니다.</p>
 				</div>
-				<img class="float_right">
+				<video class="float_right" data-autoplay>
+					<source src="video/Shotgun.mp4" type="video/mp4">
+				</video>
 			</div>
 		</div>
 		<div class="section">
