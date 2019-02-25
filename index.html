@@ -202,6 +202,10 @@
 			word-break: keep-all
 		}
 
+		.section {
+			height: 100vh;
+		}
+
 		@media (min-width: 576px) {
 			h1 {
 				font-size: 2.2em;
@@ -317,9 +321,30 @@
 	</div>
 
 	<script>
-		new fullpage('#fullpage', {
-			licenseKey: 'YOUR_KEY_HERE'
-		});
+		function iOS() {
+			var iDevices = [
+				'iPad Simulator',
+				'iPhone Simulator',
+				'iPod Simulator',
+				'iPad',
+				'iPhone',
+				'iPod'
+			];
+			if (!!navigator.platform) {
+				while (iDevices.length) {
+					if (navigator.platform === iDevices.pop()) { return true; }
+				}
+			}
+			return false;
+		}
+
+		if (!iOS()) {
+			new fullpage('#fullpage', {
+				licenseKey: 'YOUR_KEY_HERE'
+			});
+		}
+
+
 	</script>
 </body>
 
