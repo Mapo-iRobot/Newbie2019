@@ -375,9 +375,11 @@
 			});
 		}
 		else {
-			document.getElementsByClassName('.section').forEach(element => {
-				element.classList.add('ios');
-			});
+			var sections = document.getElementsByClassName('section');
+
+			for (var i = 0; i < sections.length; ++i) {
+				sections[i].classList.add('ios');
+			}
 		}
 
 
